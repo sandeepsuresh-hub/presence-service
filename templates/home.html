@@ -1,9 +1,14 @@
-{% extends "homelayout.html" %}
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
 
 {% block body %}
-
-	{% for message in get_flashed_messages() %}
-      {{ message }}
-    {% endfor %}
-
+  <h1 class="text-center">Presence Service</h1>
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <div class="jumbotron">
+        Welcome to Presence Service
+      </div>
+    </div>
+  </div>
 {% endblock %}

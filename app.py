@@ -17,12 +17,12 @@ def login_required(f):
 
 @app.route("/")
 #@login_required
-def index():
-    return render_template("index.html")
-
-@app.route("/home")
 def home():
     return render_template("home.html")
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -33,7 +33,7 @@ def login():
 		else:
 			session['logged in'] = True
 			flash('You just logged in!')
-			return redirect(url_for('home'))
+			return redirect(url_for('dashboard'))
 	return render_template('login.html', error=error)
 
 @app.route("/logout")
