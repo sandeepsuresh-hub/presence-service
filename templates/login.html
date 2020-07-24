@@ -12,10 +12,14 @@
    		<input type="password" placeholder="Password" name="password" value="{{request.form.password}}"><br><br>
   		<input type="submit" value="Login">
   	</form>
+    {% for message in get_flashed_messages() %}
+      {{ message }}
+    {% endfor %}
+
+    {% if error %}
+      <p class="error"><strong>{{ error }}</strong></p>
+    {% endif %}
     </center>
-   	{% if error %}
-  		<p class="error"><strong>{{ error }}</strong></p>
-  	{% endif %}
     </div>
     </div>
     </div>
