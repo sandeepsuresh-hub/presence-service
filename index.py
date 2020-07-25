@@ -1,6 +1,6 @@
 from flask import Flask, render_template, g, redirect, url_for, request, session, flash
 from forms import LoginForm, RegisterForm
-from flask_bcrypt import Bcrypt
+#from flask_bcrypt import Bcrypt
 from flask_sqlalchemy import SQLAlchemy
 #import sqlite3 
 
