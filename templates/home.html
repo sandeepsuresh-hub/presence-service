@@ -3,13 +3,23 @@
 {% block title %}Dasboard{% endblock %}
 
 {% block content %}
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='avatar.css') }}">
+	<img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="avatar">
+	<img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" class="avatar">
+    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
+    <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+    <div class="sharethis-inline-share-buttons">
+    	<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5f1c3f390454460012b5645b&product=inline-share-buttons" async="async"></script>
+    </div>
 	<nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-white" href="/logout">Logout</a>  
     </nav>
+
 {% endblock %}
 
 {% block body %}
-
+      
 	{% for message in get_flashed_messages() %}
       {{ message }}
     {% endfor %}
