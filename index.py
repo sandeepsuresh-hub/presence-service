@@ -27,7 +27,6 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 	error = None
-	form = LoginForm(request.form)
 	if request.method == 'POST':
 		if request.form['username'] != 'admin' or request.form['password'] != 'admin':
 			error = 'Invalid credentials. Please try again!!!'
@@ -35,7 +34,7 @@ def login():
 			session['logged in'] = True
 			flash('You just logged in!')
 			return redirect(url_for('home'))
-	return render_template('login.html', form=form, error=error)
+	return render_template('login.html', error=error)
 
 @app.route("/logout")
 #@login_required
