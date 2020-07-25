@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+  <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-white" href="/login" title="Login">Login</a>  
+  </nav>
+{% endblock %}
+
+{% block body %}
+    <h5 align="center">Register</h5>
+    <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+    <div class="jumbotron">
+    <center>
+  	<form action="" method="post">
+  		<input type="text" placeholder="Username" name="username"><br><br>
+  		<input type="email" placeholder="Email" name="email"><br><br>
+   		<input type="password" placeholder="Password" name="password"><br><br>
+   		<input type="password" placeholder="Confirm Password" name="username"><br><br>
+		<input type="submit" value="Register" class="btn btn-secondary">
+  	</form>
+    </center>
+    </div>
+    </div>
+    </div>
+{% endblock %}
